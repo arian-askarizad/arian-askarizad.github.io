@@ -1,0 +1,124 @@
+h1 {
+    font-size: 64px;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.body1 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.body2 {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.body3 {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.caption {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.overline {
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.container {
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (max-width: 1300px) {
+        width: 80%;
+    }
+
+    @media (max-width: 700px) {
+        width: 100%;
+        padding: 0 20px;
+    }
+}
+
+.button {
+    background: linear-gradient(254.1deg, #36EC7C -11.74%, #119A8D 103.87%);
+    width: 170px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    font-weight: bold;
+}
+
+.title {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.dark-card {
+    background: #262626;
+    box-shadow: inset 13px 11px 11px rgba(0, 0, 0, 0.16);
+    border-radius: 15px;
+    padding: 2rem;
+}
+
+.card {
+    position: relative;
+    border-radius: 40px;
+    
+    &__main {
+        z-index: 2;
+        position: relative;
+    }
+    
+    &::before {
+        content: '';
+        position: absolute;
+        border-radius: 40px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient( rgba(255, 255, 255, 0.68) 0.66%, rgba(255, 255, 255, 0) 112.49%);
+        opacity: 0.37;
+        backdrop-filter: blur(48px);
+    }
+    
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: '';
+        background: linear-gradient(254.1deg, #119A8D 53.71%, #36EC7C 103.87%);
+        display: flex;
+        z-index: 1;
+        opacity: 0.37;
+        width: 50%;
+        height: 283px;
+        border-radius: 70px;
+        filter: blur(112px);
+        background: linear-gradient(254.1deg, #119A8D 53.71%, #36EC7C 103.87%);
+        filter: blur(112px);
+        border-radius: 70px;
+    }
+}
